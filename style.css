@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.people {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  margin: 0 auto;
+  max-width: 940px;
+  padding: 30px 0;
+  font-family: Arial, sans-serif; }
+
+.person {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 8px;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 12px;
+  transition: .3s all linear;
+  height: 327px; }
+  .person__photo {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 10px; }
+    .person__photo img {
+      display: flex;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      animation: nothover 1s forwards;
+      transition: .3s all linear; }
+    .person__photo .rank-wrap {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translate(0%, -50%);
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      border-radius: 50%; }
+      .person__photo .rank-wrap .rank {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #8B0000; }
+  .person:hover {
+    background: #EEEEEE;
+    border-radius: 12px;
+    margin-right: 0; }
+    .person:hover img {
+      animation: hover 1s forwards;
+      width: 240px;
+      height: 240px; }
+    .person:hover .name {
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      color: #2F4F4F; }
+    .person:hover .extra {
+      opacity: 1;
+      font-size: 21.6px;
+      line-height: 25px;
+      text-align: center;
+      color: #000000; }
+
+.person__details {
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #2F4F4F; }
+  .person__details .extra {
+    opacity: 0; }
+
+@media (max-width: 1000px) {
+  .people {
+    max-width: 750px;
+    padding: 0 160px;
+    justify-content: center; } }
+@media (max-width: 750px) {
+  .people {
+    max-width: 500px;
+    padding: 0 35px;
+    justify-content: center; } }
+@keyframes hover {
+  to {
+    border-radius: 20%; } }
+@keyframes nothover {
+  to {
+    border-radius: 50%; } }
+
+/*# sourceMappingURL=style.css.map */
