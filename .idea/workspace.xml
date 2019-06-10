@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09117aeb-e67b-4716-b3f9-3a028c6dd005" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.sass-cache/8e0c37a4ac02e9ef9a9f89e0200b0547fdb0a826/style.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/8e0c37a4ac02e9ef9a9f89e0200b0547fdb0a826/style.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="75">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -60,8 +57,8 @@
       <find>person</find>
       <find>animation</find>
       <find>padding</find>
-      <find>eeeeee</find>
       <find>Roger Federer</find>
+      <find>eeeeee</find>
     </findStrings>
     <replaceStrings>
       <replace>person__details</replace>
@@ -154,12 +151,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560147780952</updated>
-      <workItem from="1560147782716" duration="9295000" />
+      <workItem from="1560147782716" duration="9586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9295000" />
+    <option name="totallyTimeSpent" value="9586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -208,8 +205,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="75">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>

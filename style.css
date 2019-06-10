@@ -55,8 +55,7 @@
         color: #8B0000; }
   .person:hover {
     background: #EEEEEE;
-    border-radius: 12px;
-    transform: scale(1.2, 1.2);
+    border-radius: 10px;
     z-index: 1;
     animation: size 1s forwards; }
     .person:hover img {
@@ -99,6 +98,7 @@
     border-radius: 50%; } }
 @keyframes size {
   to {
-    height: 344px; } }
+    transform: scale(1.2, 1.2);
+    border-radius: 12px; } }
 
 /*# sourceMappingURL=style.css.map */
