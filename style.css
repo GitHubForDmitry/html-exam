@@ -37,8 +37,7 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      transition: 1s;
-      animation: unhover 1s forwards; }
+      transition: 1s; }
     .person__photo .rank-wrap {
       position: absolute;
       right: 10px;
@@ -47,8 +46,7 @@
       width: 30px;
       height: 30px;
       background-color: #fff;
-      border-radius: 50%;
-      animation: rank 1s forwards; }
+      border-radius: 50%; }
       .person__photo .rank-wrap .rank {
         position: absolute;
         top: 50%;
@@ -57,7 +55,8 @@
         color: #8B0000; }
         .person__photo .rank-wrap .rank:hover {
           font-size: 21.6px;
-          line-height: 25px; }
+          line-height: 25px;
+          transition: 1s all; }
       .person__photo .rank-wrap .extra {
         font-size: 18px;
         line-height: 21px; }
@@ -65,6 +64,8 @@
     background: #EEEEEE;
     border-radius: 10px;
     z-index: 1; }
+    .person:hover img {
+      border-radius: 20%; }
     .person:hover .name {
       font-size: 23px;
       line-height: 24px;
@@ -96,8 +97,8 @@
     font-size: 20px;
     line-height: 23px;
     text-align: center;
-    animation: name 1s forwards;
-    color: #2F4F4F; }
+    color: #2F4F4F;
+    transition: 1s all; }
 
 @media (max-width: 1000px) {
   .people {

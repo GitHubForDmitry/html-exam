@@ -47,7 +47,6 @@
       height: 200px;
       border-radius: 50%;
       transition: 1s;
-      animation: unhover 1s forwards;
     }
     .rank-wrap {
       position: absolute;
@@ -58,13 +57,13 @@
       height: 30px;
       background-color: #fff;
       border-radius: 50%;
-      animation: rank 1s forwards;
       & .rank {
         @include center;
         color: #8B0000;
         &:hover {
           font-size: 21.6px;
           line-height: 25px;
+          transition: 1s all;
         }
       }
       .extra {
@@ -78,6 +77,9 @@
     background: #EEEEEE;
     border-radius: 10px;
     z-index: 1;
+    img {
+      border-radius: 20%;
+    }
     .name {
       font-size: 23px;
       line-height: 24px;
@@ -108,7 +110,6 @@
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-
     color: #000000;
   }
   .name {
@@ -116,8 +117,8 @@
     font-size: 20px;
     line-height: 23px;
     text-align: center;
-    animation: name 1s forwards;
     color: #2F4F4F;
+    transition: 1s all;
   }
 }
 
