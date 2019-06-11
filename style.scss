@@ -30,9 +30,10 @@
   margin-bottom: 8px;
   cursor: pointer;
   box-sizing: border-box;
-  transition: .3s all linear;
   padding: 12px;
-  height: 344px;
+  height: 287px;
+  width: 220px;
+  transition: 1s all;
   &__photo {
     position: relative;
     display: flex;
@@ -45,8 +46,8 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      animation: nothover 1s forwards;
-      transition: .3s all linear;
+      transition: 1s;
+      animation: unhover 1s forwards;
     }
     .rank-wrap {
       position: absolute;
@@ -57,9 +58,18 @@
       height: 30px;
       background-color: #fff;
       border-radius: 50%;
+      animation: rank 1s forwards;
       & .rank {
         @include center;
         color: #8B0000;
+        &:hover {
+          font-size: 21.6px;
+          line-height: 25px;
+        }
+      }
+      .extra {
+        font-size: 18px;
+        line-height: 21px
       }
     }
   }
@@ -68,23 +78,23 @@
     background: #EEEEEE;
     border-radius: 10px;
     z-index: 1;
-    animation: size 1s forwards;
-    img {
-      animation: hover 1s forwards;
-    }
-    .name {font-size: 24px;
-      line-height: 28px;
-      text-align: center;
-      color: #2F4F4F;
+    .name {
+      font-size: 23px;
+      line-height: 24px;
+      transition: 1s all;
     }
     .extra {
       opacity: 1;
-      font-size: 21.6px;
-      line-height: 25px;
       text-align: center;
       color: #000000;
+      font-size: 21.6px;
+      line-height: 25px;
+      transition: 1s all;
       }
     }
+  &:hover {
+    transform: scale(1.2);
+  }
   }
 
 .person__details {
@@ -92,9 +102,22 @@
   line-height: 23px;
   text-align: center;
   color: #2F4F4F;
-
   .extra {
     opacity: 0;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+    color: #000000;
+  }
+  .name {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    animation: name 1s forwards;
+    color: #2F4F4F;
   }
 }
 
@@ -113,20 +136,34 @@
     justify-content: center;
   }
 }
-
-@keyframes hover {
-to {
-    border-radius: 20%;
-}
-}
-@keyframes nothover {
-  to {
-    border-radius: 50%;
-  }
-}
-@keyframes size {
-  to {
-    transform: scale(1.2, 1.2);
-    border-radius: 12px;
-  }
-}
+//
+//@keyframes name {
+//  to {
+//    font-size: 23px;
+//    line-height: 24px;
+//  }
+//}
+//
+//@keyframes rank {
+//  to {
+//    font-size: 21.6px;
+//    line-height: 25px;
+//  }
+//}
+//
+//@keyframes hover {
+//  to {
+//    border-radius: 20%;
+//  }
+//}
+//@keyframes unhover {
+//  to {
+//    border-radius: 50%;
+//  }
+//}
+//@keyframes size {
+//  to {
+//    transform: scale(1.2, 1.2);
+//    border-radius: 12px;
+//  }
+//}

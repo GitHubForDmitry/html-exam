@@ -21,9 +21,10 @@
   margin-bottom: 8px;
   cursor: pointer;
   box-sizing: border-box;
-  transition: .3s all linear;
   padding: 12px;
-  height: 344px; }
+  height: 287px;
+  width: 220px;
+  transition: 1s all; }
   .person__photo {
     position: relative;
     display: flex;
@@ -36,8 +37,8 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      animation: nothover 1s forwards;
-      transition: .3s all linear; }
+      transition: 1s;
+      animation: unhover 1s forwards; }
     .person__photo .rank-wrap {
       position: absolute;
       right: 10px;
@@ -46,31 +47,37 @@
       width: 30px;
       height: 30px;
       background-color: #fff;
-      border-radius: 50%; }
+      border-radius: 50%;
+      animation: rank 1s forwards; }
       .person__photo .rank-wrap .rank {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: #8B0000; }
+        .person__photo .rank-wrap .rank:hover {
+          font-size: 21.6px;
+          line-height: 25px; }
+      .person__photo .rank-wrap .extra {
+        font-size: 18px;
+        line-height: 21px; }
   .person:hover {
     background: #EEEEEE;
     border-radius: 10px;
-    z-index: 1;
-    animation: size 1s forwards; }
-    .person:hover img {
-      animation: hover 1s forwards; }
+    z-index: 1; }
     .person:hover .name {
-      font-size: 24px;
-      line-height: 28px;
-      text-align: center;
-      color: #2F4F4F; }
+      font-size: 23px;
+      line-height: 24px;
+      transition: 1s all; }
     .person:hover .extra {
       opacity: 1;
+      text-align: center;
+      color: #000000;
       font-size: 21.6px;
       line-height: 25px;
-      text-align: center;
-      color: #000000; }
+      transition: 1s all; }
+  .person:hover {
+    transform: scale(1.2); }
 
 .person__details {
   font-size: 20px;
@@ -78,7 +85,19 @@
   text-align: center;
   color: #2F4F4F; }
   .person__details .extra {
-    opacity: 0; }
+    opacity: 0;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000; }
+  .person__details .name {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    animation: name 1s forwards;
+    color: #2F4F4F; }
 
 @media (max-width: 1000px) {
   .people {
@@ -90,15 +109,5 @@
     max-width: 500px;
     padding: 0 35px;
     justify-content: center; } }
-@keyframes hover {
-  to {
-    border-radius: 20%; } }
-@keyframes nothover {
-  to {
-    border-radius: 50%; } }
-@keyframes size {
-  to {
-    transform: scale(1.2, 1.2);
-    border-radius: 12px; } }
 
 /*# sourceMappingURL=style.css.map */
