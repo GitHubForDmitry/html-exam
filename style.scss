@@ -16,6 +16,9 @@ $padX: 55px;
   grid-row-gap: $gridRowGap;
   padding: $padY $padX;
   justify-content: center;
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(2, $gridBlock);
+  }
 }
 
 .person__wrap {
@@ -26,7 +29,7 @@ $padX: 55px;
 
 .person {
   position: absolute;
-  padding: 10px 10px 30px;
+  padding: 10px 10px 21px;
   cursor: pointer;
   transition: 1s all;
   &:hover {
@@ -40,12 +43,14 @@ $padX: 55px;
     }
     .name {
       font-size: 24px;
-      line-height: 28px;
+      line-height: 24px;
+      margin-bottom: 10px;
       transition: 1s all;
+      padding-bottom: 16px;
     }
     .extra {
-      font-size: 21.6px;
-      line-height: 25px;
+      font-size: 20px;
+      line-height: 20px;
       opacity: 1;
       transition: 1s all;
     }

@@ -9,6 +9,9 @@
   grid-row-gap: 1px;
   padding: 30px 55px;
   justify-content: center; }
+  @media (max-width: 1000px) {
+    .people {
+      grid-template-columns: repeat(2, 200px); } }
 
 .person__wrap {
   position: relative;
@@ -17,7 +20,7 @@
 
 .person {
   position: absolute;
-  padding: 10px 10px 30px;
+  padding: 10px 10px 21px;
   cursor: pointer;
   transition: 1s all; }
   .person:hover {
@@ -30,11 +33,13 @@
       transition: 1s all; }
     .person:hover .name {
       font-size: 24px;
-      line-height: 28px;
-      transition: 1s all; }
+      line-height: 24px;
+      margin-bottom: 10px;
+      transition: 1s all;
+      padding-bottom: 16px; }
     .person:hover .extra {
-      font-size: 21.6px;
-      line-height: 25px;
+      font-size: 20px;
+      line-height: 20px;
       opacity: 1;
       transition: 1s all; }
 
