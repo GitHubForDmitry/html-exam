@@ -3,168 +3,101 @@
   padding: 0;
 }
 
-@mixin  center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+$gridBlock: 200px;
+$gridColGap: 30px;
+$gridRowGap: 1px;
+$padY: 30px;
+$padX: 55px;
 
 .people {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-  margin: 30px auto;
-  max-width: 940px;
-  padding: 30px 0;
-  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(4, $gridBlock);
+  grid-column-gap: $gridColGap;
+  grid-row-gap: $gridRowGap;
+  padding: $padY $padX;
+  justify-content: center;
+}
+
+.person__wrap {
+  position: relative;
+  height: $gridBlock;
+  margin-bottom: 71px;
 }
 
 .person {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 8px;
+  position: absolute;
+  padding: 10px 10px 30px;
   cursor: pointer;
-  box-sizing: border-box;
-  padding: 12px;
-  height: 287px;
-  width: 220px;
   transition: 1s all;
-  &__photo {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-bottom: 10px;
-    & img {
-      display: flex;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      transition: 1s;
-    }
-    .rank-wrap {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translate(0%, -50%);
-      width: 30px;
-      height: 30px;
-      background-color: #fff;
-      border-radius: 50%;
-      & .rank {
-        @include center;
-        color: #8B0000;
-        &:hover {
-          font-size: 21.6px;
-          line-height: 25px;
-          transition: 1s all;
-        }
-      }
-      .extra {
-        font-size: 18px;
-        line-height: 21px
-      }
-    }
-  }
-
   &:hover {
-    background: #EEEEEE;
+    background-color: #eee;
     border-radius: 10px;
     z-index: 1;
+    transform: scale(1.2);
     img {
-      border-radius: 20%;
+      border-radius: 25%;
+      transition: 1s all;
     }
     .name {
-      font-size: 23px;
-      line-height: 24px;
+      font-size: 24px;
+      line-height: 28px;
       transition: 1s all;
     }
     .extra {
-      opacity: 1;
-      text-align: center;
-      color: #000000;
       font-size: 21.6px;
       line-height: 25px;
+      opacity: 1;
       transition: 1s all;
-      }
     }
-  &:hover {
-    transform: scale(1.2);
   }
-  }
+}
 
-.person__details {
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  color: #2F4F4F;
-  .extra {
-    opacity: 0;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    color: #000000;
+.person__photo {
+  width: 200px;
+  position: relative;
+  img {
+    display: flex;
+    justify-content: start;
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 6px;
+
   }
+  .rank-wrap {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    .rank {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.person__details {
+  font-family: Arial, sans-serif;
+  text-align: center;
   .name {
-    font-family: Arial, sans-serif;
     font-size: 20px;
     line-height: 23px;
-    text-align: center;
     color: #2F4F4F;
-    transition: 1s all;
+  }
+  .extra {
+    position: relative;
+    opacity: 0;
+    .pay {
+      &::before {
+        content: '$';
+      }
+      &::after {
+        content: 'M';
+      }
+    }
   }
 }
-
-@media (max-width: 1000px) {
-  .people {
-    max-width: 750px;
-    padding: 0 160px;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 750px) {
-  .people {
-    max-width: 500px;
-    padding: 0 35px;
-    justify-content: center;
-  }
-}
-//
-//@keyframes name {
-//  to {
-//    font-size: 23px;
-//    line-height: 24px;
-//  }
-//}
-//
-//@keyframes rank {
-//  to {
-//    font-size: 21.6px;
-//    line-height: 25px;
-//  }
-//}
-//
-//@keyframes hover {
-//  to {
-//    border-radius: 20%;
-//  }
-//}
-//@keyframes unhover {
-//  to {
-//    border-radius: 50%;
-//  }
-//}
-//@keyframes size {
-//  to {
-//    transform: scale(1.2, 1.2);
-//    border-radius: 12px;
-//  }
-//}
