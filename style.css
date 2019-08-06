@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-column-gap: 30px;
+  grid-row-gap: 1px;
+  padding: 30px 55px;
+  justify-content: center; }
+  @media (max-width: 1000px) {
+    .people {
+      grid-template-columns: repeat(2, 200px); } }
+
+.person__wrap {
+  position: relative;
+  height: 200px;
+  margin-bottom: 71px; }
+
+.person {
+  position: absolute;
+  padding: 10px 10px 21px;
+  cursor: pointer;
+  transition: 1s all; }
+  .person:hover {
+    background-color: #eee;
+    border-radius: 10px;
+    z-index: 1;
+    transform: scale(1.2); }
+    .person:hover img {
+      border-radius: 25%;
+      transition: 1s all; }
+    .person:hover .name {
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 10px;
+      transition: 1s all;
+      padding-bottom: 16px; }
+    .person:hover .extra {
+      font-size: 20px;
+      line-height: 20px;
+      opacity: 1;
+      transition: 1s all; }
+
+.person__photo {
+  width: 200px;
+  position: relative; }
+  .person__photo img {
+    display: flex;
+    justify-content: start;
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 6px; }
+  .person__photo .rank-wrap {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px; }
+    .person__photo .rank-wrap .rank {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
+.person__details {
+  font-family: Arial, sans-serif;
+  text-align: center; }
+  .person__details .name {
+    font-size: 20px;
+    line-height: 23px;
+    color: #2F4F4F; }
+  .person__details .extra {
+    position: relative;
+    opacity: 0; }
+    .person__details .extra .pay::before {
+      content: '$'; }
+    .person__details .extra .pay::after {
+      content: 'M'; }
+
+/*# sourceMappingURL=style.css.map */
